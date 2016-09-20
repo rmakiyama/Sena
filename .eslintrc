@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "no-constant-condition": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "no-console": ["warn", { "allow": ["tron"]}],
+    "global-require": "off",
+    "semi": [2, "never"]
+  },
+}
