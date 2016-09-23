@@ -1,5 +1,6 @@
 {
   "extends": "airbnb",
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true
@@ -11,6 +12,6 @@
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
     "no-console": ["warn", { "allow": ["tron"]}],
     "global-require": "off",
-    "semi": [2, "never"]
+    "semi": [2, "never"],
   },
 }
