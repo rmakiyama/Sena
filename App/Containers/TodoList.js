@@ -24,7 +24,7 @@ class TodoList extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.todos !== this.props.todos) {
       this.setState({
-        dataSource: this.state.dataSource.cloneWithRowsAndSections(nextProps),
+        dataSource: this.state.dataSource.cloneWithRows(nextProps.todos),
       })
     }
   }
