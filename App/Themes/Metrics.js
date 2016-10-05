@@ -6,6 +6,7 @@ const metrics = {
   marginHorizontal: 16,
   marginVertical: 16,
   section: 25,
+  row: 48,
   baseMargin: 16,
   doubleBaseMargin: 26,
   smallMargin: 8,

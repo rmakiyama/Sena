@@ -1,8 +1,13 @@
 import React, { PropTypes } from 'react'
-import { Text } from 'react-native'
+import { View, Text } from 'react-native'
 
-const Todo = props => <Text>{props.todo}</Text>
+import styles from './Styles/TodoStyle'
 
+const Todo = props => (
+  <View style={styles.row}>
+    <Text style={styles.text}>□　{props.todo}</Text>
+  </View>
+)
 Todo.propTypes = {
   todo: PropTypes.string.isRequired,
 }

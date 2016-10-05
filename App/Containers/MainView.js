@@ -7,11 +7,12 @@ import { connect } from 'react-redux'
 import TodoList from './TodoList'
 import TodoForm from '../Components/TodoForm'
 import Actions from '../Actions/Creators'
+import styles from './Styles/MainViewStyle'
 
 const MainView = ({ addTodo, todos }) => (
-  <View>
-    <TodoList todos={todos} />
-    <TodoForm onPress={text => addTodo(text)} />
+  <View style={styles.main}>
+    <TodoList style={styles.list} todos={todos} />
+    <TodoForm style={styles.form} onPress={text => addTodo(text)} />
   </View>
 )
 

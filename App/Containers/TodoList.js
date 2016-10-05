@@ -1,7 +1,8 @@
 import React, { PropTypes, Component } from 'react'
-import { ListView } from 'react-native'
+import { View, ListView } from 'react-native'
 
 import Todo from '../Components/Todo'
+import styles from './Styles/TodoListStyle'
 
 class TodoList extends Component {
   static propTypes = {
@@ -34,6 +35,7 @@ class TodoList extends Component {
         style={{ flex: 1 }}
         dataSource={this.state.dataSource}
         renderRow={todo => <Todo todo={todo} />}
+        renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
       />
     )
   }

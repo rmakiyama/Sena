@@ -1,6 +1,8 @@
 import React, { PropTypes, Component } from 'react'
 import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 
+import styles from './Styles/TodoFormStyle'
+
 class TodoForm extends Component {
 
   static propTypes = {
@@ -26,14 +28,18 @@ class TodoForm extends Component {
   render() {
     const { onPress } = this.props
     return (
-      <View>
+      <View style={styles.form}>
         <TextInput
+          style={styles.input}
           value={this.state.text}
-          placeHolder="ipnut your todo"
+          placeholder="input your todo"
           onChangeText={text => this.setState({ text })}
         />
-        <TouchableOpacity onPress={() => this.handleOnPress(onPress)}>
-          <Text>ADD</Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => this.handleOnPress(onPress)}
+        >
+          <Text style={styles.text}>✈</Text>
         </TouchableOpacity>
       </View>
     )
